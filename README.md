@@ -1,6 +1,5 @@
-# theme_with_getx
+# ngulik_app
 
-![](demo.gif)
 
 ## Getting Started
 
