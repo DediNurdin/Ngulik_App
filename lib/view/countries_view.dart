@@ -6,8 +6,8 @@ import 'package:theme_with_getx/view/widgets/country_custom_view.dart';
 import 'package:theme_with_getx/view_model/country_controller.dart';
 
 // ignore: must_be_immutable
-class CountriesView extends StatelessWidget {
-  CountriesView({super.key});
+class HomeView extends StatelessWidget {
+  HomeView({super.key});
 
   CountryController countryController = Get.put(CountryController());
 

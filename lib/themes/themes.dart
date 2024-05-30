@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 class Themes {
   static final light = ThemeData(
+    // splashColor: Colors.transparent,
+    // highlightColor: Colors.transparent,
     brightness: Brightness.light,
     primaryColor: Colors.green,
     scaffoldBackgroundColor: Colors.white,
@@ -13,6 +15,8 @@ class Themes {
   );
 
   static final dark = ThemeData(
+      // splashColor: Colors.transparent,
+      // highlightColor: Colors.transparent,
       brightness: Brightness.dark,
       primaryColor: Colors.lightBlue[800],
       scaffoldBackgroundColor: Colors.black45,

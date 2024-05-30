@@ -1,49 +1,45 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:theme_with_getx/themes/controller.dart';
+import 'package:theme_with_getx/data/core/authentication_manager.dart';
+import 'package:theme_with_getx/view_model/theme_controller.dart';
 
 class ProfileView extends StatelessWidget {
-  const ProfileView({super.key});
+  ProfileView({super.key});
+
+  final AuthenticationManager _authManager = Get.find();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Profile'),
-        actions: [
-          GetBuilder<ThemeController>(
-            builder: (controller) {
-              return Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const Icon(Icons.light_mode),
-                  Switch(
-                    activeColor: Colors.amber,
-                    value: controller.isDark,
-                    onChanged: (value) {
-                      controller.changeTheme(value);
-                    },
-                  ),
-                  const Icon(Icons.dark_mode),
-                ],
-              );
-            },
-          ),
-        ],
-      ),
-      body: Column(
-        children: [
-          const Text(
-            "Dedi Nurdiansyah",
-            textScaler: TextScaler.linear(3),
-          ),
-          const Card(
-            child:
-                Padding(padding: EdgeInsets.all(10), child: Text('Ini Card')),
-          ),
-          MaterialButton(child: const Text('Ini Button'), onPressed: () {})
-        ],
-      ),
-    );
+        appBar: AppBar(
+          title: const Text('Profile'),
+          actions: [
+            GetBuilder<ThemeController>(
+              builder: (controller) {
+                return Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const Icon(Icons.light_mode),
+                    Switch(
+                      activeColor: Colors.amber,
+                      value: controller.isDark,
+                      onChanged: (value) {
+                        controller.changeTheme(value);
+                      },
+                    ),
+                    const Icon(Icons.dark_mode),
+                  ],
+                );
+              },
+            ),
+          ],
+        ),
+        body: Center(
+          child: ElevatedButton(
+              child: const Text('Logout'),
+              onPressed: () {
+                _authManager.logOut();
+              }),
+        ));
   }
 }

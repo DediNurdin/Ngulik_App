@@ -1,30 +1,55 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:theme_with_getx/data/core/authentication_manager.dart';
+import 'package:theme_with_getx/view/on_board_view.dart';
 
 class SplashView extends StatelessWidget {
-  const SplashView({super.key});
+  final AuthenticationManager _authmanager = Get.put(AuthenticationManager());
+
+  SplashView({super.key});
+
+  Future<void> initializeSettings() async {
+    _authmanager.checkLoginStatus();
+
+    await Future.delayed(const Duration(seconds: 3));
+  }
 
   @override
   Widget build(BuildContext context) {
-    Future.delayed(const Duration(seconds: 2), () {
-      Get.offAllNamed('/countries');
-    });
-    return const Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            FlutterLogo(
-              size: 240,
-            ),
-            SizedBox(
-              height: 50,
-            ),
-            CircularProgressIndicator(),
-          ],
-        ),
-      ),
+    return FutureBuilder(
+      future: initializeSettings(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return waitingView();
+        } else {
+          if (snapshot.hasError) {
+            return errorView(snapshot);
+          } else {
+            return const OnBoard();
+          }
+        }
+      },
     );
+  }
+
+  Scaffold errorView(AsyncSnapshot<Object?> snapshot) {
+    return Scaffold(body: Center(child: Text('Error: ${snapshot.error}')));
+  }
+
+  Scaffold waitingView() {
+    return const Scaffold(
+        body: Center(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Padding(
+            padding: EdgeInsets.all(16.0),
+            child: CircularProgressIndicator(),
+          ),
+          Text('Loading...'),
+        ],
+      ),
+    ));
   }
 }

@@ -9,13 +9,7 @@ class NetworkApiService extends BaseApiService {
   Future<void> get() async {
     dynamic jsonResponse;
 
-    http.Response res = await http.get(Uri.parse(url)).timeout(
-      const Duration(seconds: 3),
-      onTimeout: () {
-        // ignore: null_argument_to_non_null_type
-        return Future.value();
-      },
-    );
+    http.Response res = await http.get(Uri.parse(url));
     jsonResponse = jsonOutput(res);
 
     return jsonResponse;
