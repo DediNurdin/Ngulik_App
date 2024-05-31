@@ -1,9 +1,10 @@
 import 'package:get/get_connect.dart';
 import 'package:get/get_connect/http/src/status/http_status.dart';
-import 'package:theme_with_getx/model/login/login_request_model.dart';
-import 'package:theme_with_getx/model/login/login_response_model.dart';
-import 'package:theme_with_getx/model/login/register_request_model.dart';
-import 'package:theme_with_getx/model/login/register_response_model.dart';
+
+import '../../model/login/login_request_model.dart';
+import '../../model/login/login_response_model.dart';
+import '../../model/login/register_request_model.dart';
+import '../../model/login/register_response_model.dart';
 
 class LoginService extends GetConnect {
   final String loginUrl = 'https://reqres.in/api/login';

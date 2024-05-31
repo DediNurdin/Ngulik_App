@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:theme_with_getx/data/network/base_api_service.dart';
+import 'base_api_service.dart';
 import 'package:http/http.dart' as http;
 
 String url = "https://restcountries.com/v3.1/all?fields=name,flags";

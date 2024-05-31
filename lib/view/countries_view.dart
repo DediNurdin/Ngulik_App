@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:theme_with_getx/model/country_model.dart';
-import 'package:theme_with_getx/view/widgets/country_custom_view.dart';
-import 'package:theme_with_getx/view_model/country_controller.dart';
+import '../model/country_model.dart';
+import 'widgets/country_custom_view.dart';
+import '../view_model/country_controller.dart';
 
 // ignore: must_be_immutable
 class HomeView extends StatelessWidget {

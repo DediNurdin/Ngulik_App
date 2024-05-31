@@ -1,4 +1,4 @@
-import 'package:theme_with_getx/data/network/network_api_service.dart';
+import '../data/network/network_api_service.dart';
 
 class CountryRepository {
   final NetworkApiService service = NetworkApiService();

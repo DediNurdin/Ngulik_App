@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:theme_with_getx/data/core/authentication_manager.dart';
-import 'package:theme_with_getx/view_model/theme_controller.dart';
+import '../data/core/authentication_manager.dart';
+import '../view_model/theme_controller.dart';
 
 class ProfileView extends StatelessWidget {
   ProfileView({super.key});

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:theme_with_getx/data/core/authentication_manager.dart';
-import 'package:theme_with_getx/view/base_view.dart';
-import 'package:theme_with_getx/view/login_view.dart';
+import '../data/core/authentication_manager.dart';
+import 'base_view.dart';
+import 'login_view.dart';
 
 class OnBoard extends StatelessWidget {
   const OnBoard({super.key});

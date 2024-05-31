@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:theme_with_getx/data/core/authentication_manager.dart';
-import 'package:theme_with_getx/view/on_board_view.dart';
+import '../data/core/authentication_manager.dart';
+import 'on_board_view.dart';
 
 class SplashView extends StatelessWidget {
   final AuthenticationManager _authmanager = Get.put(AuthenticationManager());

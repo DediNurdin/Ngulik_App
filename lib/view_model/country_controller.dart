@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:theme_with_getx/model/country_model.dart';
-import 'package:theme_with_getx/repository/country_repository.dart';
+import '../model/country_model.dart';
+import '../repository/country_repository.dart';
 
 class CountryController extends GetxController {
   RxBool isLoading = false.obs;

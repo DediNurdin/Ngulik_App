@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:theme_with_getx/app.dart';
+import 'app.dart';
 import 'helper/shared_pref.dart';
 
 void main() async {

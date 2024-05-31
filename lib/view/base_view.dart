@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:theme_with_getx/view_model/base_controller.dart';
+
+import '../view_model/base_controller.dart';
 
 class BaseView extends GetView<BaseController> {
   const BaseView({super.key});

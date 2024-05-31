@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:theme_with_getx/data/core/authentication_manager.dart';
-import 'package:theme_with_getx/data/network/login_service.dart';
-import 'package:theme_with_getx/model/login/login_request_model.dart';
-import 'package:theme_with_getx/model/login/register_request_model.dart';
+
+import '../data/core/authentication_manager.dart';
+import '../data/network/login_service.dart';
+import '../model/login/login_request_model.dart';
+import '../model/login/register_request_model.dart';
 
 class LoginViewModel extends GetxController {
   late final LoginService _loginService;

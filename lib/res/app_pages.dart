@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
-import 'package:theme_with_getx/helper/base_binding.dart';
-import 'package:theme_with_getx/view/base_view.dart';
-import 'package:theme_with_getx/view/countries_view.dart';
-import 'package:theme_with_getx/view/splash_view.dart';
+import '../helper/base_binding.dart';
+import '../view/base_view.dart';
+import '../view/countries_view.dart';
+import '../view/splash_view.dart';
 
 part 'app_routes.dart';
 
