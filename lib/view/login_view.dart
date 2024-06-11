@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:theme_with_getx/view/base_view.dart';
 import '../view_model/login_controller.dart';
 import '../view_model/theme_controller.dart';
 
@@ -83,9 +84,10 @@ class _LoginViewState extends State<LoginView> {
         ),
         ElevatedButton(
           onPressed: () async {
-            if (formKey.currentState?.validate() ?? false) {
-              await _viewModel.loginUser(emailCtr.text, passwordCtr.text);
-            }
+            // if (formKey.currentState?.validate() ?? false) {
+            //   await _viewModel.loginUser(emailCtr.text, passwordCtr.text);
+            // }
+            Get.to(() => const BaseView());
           },
           child: const Text('Login'),
         ),

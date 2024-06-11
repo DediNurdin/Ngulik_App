@@ -16,6 +16,8 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Country"),
+        centerTitle: true,
+        automaticallyImplyLeading: false,
       ),
       body: Obx(() {
         return countryController.isLoading.value

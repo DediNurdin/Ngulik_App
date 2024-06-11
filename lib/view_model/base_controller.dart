@@ -10,7 +10,7 @@ class BaseController extends GetxController {
   BaseController() {
     widgetOptions = <Widget>[
       HomeView(),
-      ProfileView(),
+      const ProfileView(),
     ];
   }
 
